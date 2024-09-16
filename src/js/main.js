@@ -1,2 +1,2 @@
 /* eslint-disable prettier/prettier */
-import '../scss/main.scss';
+import '../assets/scss/main.scss';
