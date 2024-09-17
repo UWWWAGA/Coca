@@ -1,6 +1,7 @@
 @mixin flex-align-center {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 @mixin flex-justify-center {
