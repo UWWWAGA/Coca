@@ -6,6 +6,10 @@
     padding: 77px 0 121px;
   }
 
+  @include mobile {
+    min-height: calc(100dvh - 128px);
+  }
+
   &::before {
     top: 50px;
     left: 181px;
@@ -97,186 +101,197 @@
 
   @include small-mobile {
     margin-bottom: 30px;
-    font-size: 42px;
-  }
-}
-
-&__subtitle {
-  margin-bottom: 69px;
-}
-
-&__form {
-  @include flex-align-center;
-  gap: 16px;
-
-  @include mini-desktop {
-    justify-content: center;
-  }
-}
-
-&__input {
-  border-bottom: 1px solid var(--neutral-color-40);
-  padding-bottom: 23px;
-  min-width: 280px;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 150%;
-  color: var(--neutral-color-100);
-  background-color: transparent;
-
-  @include small-tablet {
-    padding-bottom: 13px;
+    font-size: 38px;
   }
 
-  @include mobile {
-    min-width: 100px;
-    max-width: 180px;
-  }
-}
+  &__subtitle {
+    margin-bottom: 69px;
 
-&__btn {
-  padding: 16px 44px;
-  color: var(--neutral-color-10);
-  background-color: var(--neutral-color-100);
-
-  @include small-tablet {
-    padding: 12px 32px;
-  }
-}
-
-&__right {
-  position: relative;
-  margin-right: 20px;
-
-  @include mini-desktop {
-    display: none;
-  }
-}
-
-&__sales {
-  margin-bottom: 29px;
-  padding: 20px;
-
-  @include small-desktop {
-    max-width: 320px;
-  }
-
-  &-img {
-    @include small-desktop {
-      max-width: 280px;
+    & br {
+      @include mini-desktop {
+        display: none;
+      }
     }
   }
 
-  &-title {
-    margin-bottom: 16px;
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 150%;
-    letter-spacing: -0.03em;
-    color: #1d1e25;
-  }
-}
+  &__form {
+    @include flex-align-center;
+    gap: 16px;
 
-&__customer {
-  position: absolute;
-  top: -60px;
-  right: -140px;
-  display: inline-block;
-  padding: 15px 18px;
+    @include mini-desktop {
+      justify-content: center;
+    }
 
-  @include small-desktop {
-    top: -140px;
-    right: -30px;
+    @include small-mobile {
+      gap: 20px;
+      flex-direction: column;
+    }
   }
 
-  // @include mini-desktop {
-  //   top: 0;
-  //   right: -100px;
-  // }
-
-  &-title {
-    margin-bottom: 12px;
-    font-weight: 700;
+  &__input {
+    border-bottom: 1px solid var(--neutral-color-40);
+    padding-bottom: 23px;
+    min-width: 280px;
+    font-weight: 400;
     font-size: 16px;
-    line-height: 187%;
-    letter-spacing: -0.03em;
-    color: #1d1e25;
-  }
-}
+    line-height: 150%;
+    color: var(--neutral-color-100);
+    background-color: transparent;
 
-&__sales,
-&__customer {
-  border-radius: 8px;
-  box-shadow: 20px 40px 80px 0 #5960871f;
-  background: #fff;
-}
+    @include small-tablet {
+      padding-bottom: 13px;
+    }
 
-&__stats {
-  border-radius: 8px;
-  padding: 20px 29px;
-  box-shadow: 20px 40px 80px 0 #2d33511f;
-  text-align: left;
-  background: #000;
-
-  &-head {
-    &-th {
-      font-weight: 600;
-      font-size: 14px;
-      line-height: 143%;
-      color: #5c616f;
+    @include mobile {
+      min-width: 100px;
+      max-width: 180px;
     }
   }
 
-  &-body {
-    &-th {
-      font-weight: 600;
-      font-size: 14px;
-      line-height: 143%;
-      color: #fff;
+  &__btn {
+    padding: 16px 44px;
+    color: var(--neutral-color-10);
+    background-color: var(--neutral-color-100);
 
-      &:nth-child(1) {
-        padding-right: 80px;
+    @include small-tablet {
+      padding: 12px 32px;
+    }
+  }
+
+  &__right {
+    position: relative;
+    margin-right: 20px;
+
+    @include mini-desktop {
+      display: none;
+    }
+  }
+
+  &__sales {
+    margin-bottom: 29px;
+    padding: 20px;
+
+    @include small-desktop {
+      max-width: 320px;
+    }
+
+    &-img {
+      @include small-desktop {
+        max-width: 280px;
       }
     }
 
-    &-num {
-      display: inline-block;
-      margin-right: 3px;
-      font-weight: 600;
-      font-size: 14px;
-      line-height: 143%;
+    &-title {
+      margin-bottom: 16px;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 150%;
+      letter-spacing: -0.03em;
+      color: #1d1e25;
+    }
+  }
 
-      &-green {
-        color: #60d39c;
+  &__customer {
+    position: absolute;
+    top: -60px;
+    right: -140px;
+    display: inline-block;
+    padding: 15px 18px;
 
-        &::before {
-          background: url('../assets/icons/green-arrow-icon.svg');
+    @include small-desktop {
+      top: -140px;
+      right: -30px;
+    }
+
+    // @include mini-desktop {
+    //   top: 0;
+    //   right: -100px;
+    // }
+
+    &-title {
+      margin-bottom: 12px;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 187%;
+      letter-spacing: -0.03em;
+      color: #1d1e25;
+    }
+  }
+
+  &__sales,
+  &__customer {
+    border-radius: 8px;
+    box-shadow: 20px 40px 80px 0 #5960871f;
+    background: #fff;
+  }
+
+  &__stats {
+    border-radius: 8px;
+    padding: 20px 29px;
+    box-shadow: 20px 40px 80px 0 #2d33511f;
+    text-align: left;
+    background: #000;
+
+    &-head {
+      &-th {
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 143%;
+        color: #5c616f;
+      }
+    }
+
+    &-body {
+      &-th {
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 143%;
+        color: #fff;
+
+        &:nth-child(1) {
+          padding-right: 80px;
         }
       }
 
-      &-red {
-        color: #e35454;
-
-        &::before {
-          background: url('../assets/icons/red-arrow-icon.svg');
-        }
-      }
-
-      &-green::before,
-      &-red::before {
-        content: '';
+      &-num {
         display: inline-block;
-        width: 12px;
-        height: 12px;
-      }
-    }
+        margin-right: 3px;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 143%;
 
-    &-text {
-      font-weight: 400;
-      font-size: 14px;
-      line-height: 157%;
-      letter-spacing: -0.04rem;
-      color: #5c616e;
+        &-green {
+          color: #60d39c;
+
+          &::before {
+            background: url('../assets/icons/green-arrow-icon.svg');
+          }
+        }
+
+        &-red {
+          color: #e35454;
+
+          &::before {
+            background: url('../assets/icons/red-arrow-icon.svg');
+          }
+        }
+
+        &-green::before,
+        &-red::before {
+          content: '';
+          display: inline-block;
+          width: 12px;
+          height: 12px;
+        }
+      }
+
+      &-text {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 157%;
+        letter-spacing: -0.04rem;
+        color: #5c616e;
+      }
     }
   }
 }
