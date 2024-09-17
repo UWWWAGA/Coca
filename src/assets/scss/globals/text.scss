@@ -104,12 +104,12 @@
       }
 
       &::before {
-        content: '';
+        content: "";
         display: inline-block;
         width: 76px;
         height: 1px;
         background-color: var(--neutral-color-100);
-        transform: translateY(-40px);
+        transform: translateY(-43px);
 
         @include mini-desktop {
           display: none;
