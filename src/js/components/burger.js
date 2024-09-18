@@ -21,4 +21,3 @@ export const useBurger = () => {
 
   overlay.addEventListener('click', closeBurgerMenu);
 };
-
