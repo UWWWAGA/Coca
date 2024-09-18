@@ -1,6 +1,16 @@
 .header {
+  position: relative;
   z-index: var(--z-index-3);
   padding: 26px 0 22px;
+  
+
+  &.fixed {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: var(--neutral-color-10);
+  }
 
   @include mobile {
     padding: 22px 0 18px;
