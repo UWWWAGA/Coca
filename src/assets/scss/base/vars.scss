@@ -28,6 +28,16 @@
   --container-padding: 15px;
   --container-width: 1200px;
 
+  // z-index
+  --z-index-0: -1;
+  --z-index-1: 1;
+  --z-index-2: 2;
+  --z-index-3: 3;
+  --z-index-4: 4;
+
+  // transition
+  --transition: 0.2s ease-in-out;
+
   @include mini-desktop {
     --container-width: 1000px;
   }
@@ -39,16 +49,6 @@
   @include mobile {
     --container-width: 480px;
   }
-
-  // transition
-  --transition: 0.2s ease-in-out;
-
-  // z-index
-  --z-index-0: -1;
-  --z-index-1: 1;
-  --z-index-2: 2;
-  --z-index-3: 3;
-  --z-index-4: 4;
 }
 
 [data-theme='dark'] {

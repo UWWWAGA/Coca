@@ -1,12 +1,13 @@
-/* eslint-disable prettier/prettier */
 import '../assets/scss/main.scss';
 
 // components
 import { useTheme } from './components/theme.js';
 import { useBurger } from './components/burger.js';
+import { useInsightSlider } from './components/home/slider.js';
 
 useTheme();
 useBurger();
+useInsightSlider();
 
 const header = document.querySelector('.header');
 const headerHeight = header.offsetHeight;
@@ -21,6 +22,3 @@ window.addEventListener('scroll', () => {
   }
   prevScrollPos = currentScrollPos;
 });
-
-
-
