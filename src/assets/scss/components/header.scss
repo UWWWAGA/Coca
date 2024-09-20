@@ -2,15 +2,24 @@
   position: relative;
   z-index: var(--z-index-3);
   padding: 26px 0 22px;
-  
+  height: 130px;
+  transition: transform .2s linear;
 
-  // &.fixed {
-  //   position: fixed;
-  //   top: 0;
-  //   right: 0;
-  //   left: 0;
-  //   background-color: var(--neutral-color-10);
-  // }
+  @include small-tablet {
+    height: 100px;
+  }
+
+  &.fixed {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: var(--neutral-color-10);
+  }
+
+  &.hide {
+    transform: translateY(-130px);
+  }
 
   @include mobile {
     padding: 22px 0 18px;

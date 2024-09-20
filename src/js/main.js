@@ -13,16 +13,28 @@ useBurger();
 useInsightSlider();
 useTestimonialsSlider();
 
+// header scroll
+
+let lastScroll = 0;
+const defaultOffset = 200;
 const header = document.querySelector('.header');
-const headerHeight = header.offsetHeight;
-let prevScrollPos = window.pageYOffset;
+
+const scrollPosition = () =>
+  window.pageYOffset || document.documentElement.scrollTop;
+const containHide = () => header.classList.contains('hide');
 
 window.addEventListener('scroll', () => {
-  const currentScrollPos = window.pageYOffset;
-  if (prevScrollPos > currentScrollPos && currentScrollPos > headerHeight) {
-    header.classList.add('fixed');
-  } else {
-    header.classList.remove('fixed');
+  if (
+    scrollPosition() > lastScroll &&
+    !containHide() &&
+    scrollPosition() > defaultOffset
+  ) {
+    //scroll down
+    header.classList.add('hide');
+  } else if (scrollPosition() < lastScroll && containHide()) {
+    //scroll up
+    header.classList.remove('hide');
   }
-  prevScrollPos = currentScrollPos;
+
+  lastScroll = scrollPosition();
 });
