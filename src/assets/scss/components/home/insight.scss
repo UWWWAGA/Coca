@@ -48,7 +48,7 @@
     position: relative;
 
     @include mobile {
-    padding-bottom: 5px;
+      padding-bottom: 5px;
     }
 
     &-btns {
@@ -124,10 +124,20 @@
     @include flex-align-center;
     gap: 16px;
     justify-content: flex-end;
+    visibility: hidden;
     transform: translateY(-40px);
 
     @include mini-desktop {
       transform: translateY(5px);
+
+      @include mobile {
+        padding-top: 10px;
+        visibility: visible;
+      }
+
+      @include small-mobile {
+        padding-top: 0;
+      }
     }
   }
 
@@ -164,5 +174,3 @@
     }
   }
 }
-
-
