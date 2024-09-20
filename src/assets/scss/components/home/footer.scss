@@ -47,7 +47,7 @@
   &__descr {
     max-width: 543px;
     font-weight: 500;
-    line-height: 178%;
+    line-height: 32px;
     color: var(--neutral-color-50);
   }
 
@@ -88,7 +88,7 @@
     &-descr {
       max-width: 292px;
       font-weight: 500;
-      line-height: 162%;
+      line-height: 26px;
       color: var(--neutral-color-150);
 
       @include tablet {
@@ -109,6 +109,23 @@
   &__nav {
     @include tablet {
       width: 100%;
+    }
+
+    @include mobile {
+      display: none;
+    }
+
+    &-mobil {
+      display: none;
+
+      @include mobile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-right: auto;
+        margin-left: auto;
+      }
     }
   }
 
@@ -134,17 +151,43 @@
     @include small-mobile {
       text-align: center;
     }
+
+    &-mobil {
+      display: none;
+
+      @include mobile {
+        display: block;
+      }
+    }
   }
 
   &__item {
+    &-mobil {
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 25px;
+      margin-left: 40%;
+      max-width: 250px;
+    }
+
     &-title {
-      margin-bottom: 24px;
+      margin-bottom: 10px;
       font-weight: 700;
-      line-height: 150%;
+      line-height: 24px;
+      color: #fff;
     }
 
     @include mobile {
       min-width: 143px;
+    }
+  }
+
+  &__sublist {
+    @include mobile {
+      overflow: hidden;
+      width: 100%;
+      max-height: 0;
+      transition: var(--transition);
     }
   }
 
@@ -156,7 +199,7 @@
     &-link {
       position: relative;
       font-weight: 400;
-      line-height: 150%;
+      line-height: 24px;
       color: var(--neutral-color-150);
 
       &::after {
@@ -226,7 +269,7 @@
     &-link {
       position: relative;
       font-weight: 500;
-      line-height: 143%;
+      line-height: 20px;
       color: #fff;
 
       &::after {
@@ -267,14 +310,15 @@
       transition: opacity var(--transition);
 
       &:hover {
-        opacity: 0.8;
+        opacity: 0.7;
       }
     }
   }
 
   &__copyright {
+    max-width: 259px;
     font-weight: 500;
-    line-height: 143%;
+    line-height: 20px;
     color: #fff;
   }
 }

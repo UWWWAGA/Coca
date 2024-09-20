@@ -24,7 +24,8 @@ export const useInsightSlider = () => {
 
 export const useTestimonialsSlider = () => {
   new Swiper('.testimonials__slider', {
-    modules: [Navigation],
+    modules: [Navigation, EffectFade],
+    speed: 500,
     slidesPerView: 'auto',
     spaceBetween: 22,
     loop: true,
