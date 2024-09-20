@@ -1,5 +1,6 @@
+/* eslint-disable no-unused-vars */
 import Swiper from 'swiper';
-import { Navigation } from 'swiper/modules';
+import { Autoplay, Navigation, Pagination, EffectFade } from 'swiper/modules';
 import 'swiper/css';
 
 export const useInsightSlider = () => {
@@ -25,6 +26,22 @@ export const useTestimonialsSlider = () => {
     navigation: {
       prevEl: '.testimonials__btn--prev',
       nextEl: '.testimonials__btn--next',
+    },
+  });
+};
+
+export const autoParthersSlider = () => {
+  new Swiper('.partners__slider-mobile', {
+    modules: [Autoplay],
+    slidesPerView: 3,
+    spaceBetween: 0,
+    loop: true,
+    speed: 1000,
+    centeredSlides: true,
+    autoplay: {
+      delay: 500,
+      disableOnInteraction: false,
+      pauseOnMouseEnter: true,
     },
   });
 };
