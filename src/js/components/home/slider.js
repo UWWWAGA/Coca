@@ -5,10 +5,15 @@ import 'swiper/css';
 
 export const useInsightSlider = () => {
   new Swiper('.insight__slider', {
+    modules: [Navigation],
     slidesPerView: 'auto',
     spaceBetween: 32,
     loop: true,
     centeredSlides: true,
+    navigation: {
+      prevEl: '.insight__btn--prev-1',
+      nextEl: '.insight__btn--next-1',
+    },
     breakpoints: {
       993: {
         centeredSlides: false,
