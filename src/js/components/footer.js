@@ -1,31 +1,28 @@
-/* eslint-disable prettier/prettier */
-export const useFooter = () => {
-  const accordionLists = document.querySelectorAll('.footer__list-mobil');
+export const useAccordionFooter = () => {
+  const accordionLists = document.querySelectorAll('.footer__list');
 
-  accordionLists.forEach((el) => {
-    el.addEventListener('click', (e) => {
-      const accordionList = e.currentTarget;
-      const accordionOpenItem = accordionList.querySelector(
-        '.accordion-list__item--opened',
-      );
-      const accordionOpenContent = accordionList.querySelector(
-        '.accordion-list__item--opened .footer__sublist',
-      );
-
-      const accordionControl = e.target.closest('.footer__list-mobil-control');
+  accordionLists.forEach((element) => {
+    element.addEventListener('click', (event) => {
+      const accordionControl = event.target.closest('.footer__control');
       if (!accordionControl) return;
-      e.preventDefault();
+      event.preventDefault();
       const accordionItem = accordionControl.parentElement;
       const accordionContent = accordionControl.nextElementSibling;
 
-      if (accordionOpenItem && accordionItem != accordionOpenItem) {
-        accordionOpenItem.classList.remove('accordion-list__item--opened');
-        accordionOpenContent.style.maxHeight = null;
+      const accordionList = accordionItem.parentElement;
+      const accordionOpenedItem = accordionList.querySelector('.footer__item--opened');
+      const accordionOpenedContent = accordionList.querySelector(
+        '.footer__item--opened .footer__sublist',
+      );
+
+      if (accordionOpenedItem && accordionItem != accordionOpenedItem) {
+        accordionOpenedItem.classList.remove('footer__item--opened');
+        accordionOpenedContent.style.maxHeight = null;
       }
 
-      accordionItem.classList.toggle('accordion-list__item--opened');
+      accordionItem.classList.toggle('footer__item--opened');
 
-      if (accordionItem.classList.contains('accordion-list__item--opened')) {
+      if (accordionItem.classList.contains('footer__item--opened')) {
         accordionContent.style.maxHeight = accordionContent.scrollHeight + 'px';
       } else {
         accordionContent.style.maxHeight = null;

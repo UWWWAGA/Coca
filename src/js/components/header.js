@@ -1,24 +1,43 @@
-/* eslint-disable prettier/prettier */
-let lastScroll = 0;
-const defaultOffset = 200;
-const header = document.querySelector('.header');
+export const useHeader = () => {
+  const header = document.querySelector('.header');
+  const main = document.querySelector('.main');
 
-const scrollPosition = () =>
-  window.pageYOffset || document.documentElement.scrollTop;
-const containHide = () => header.classList.contains('hide');
+  if (!header) return;
+  if (!main) return;
 
-window.addEventListener('scroll', () => {
-  if (
-    scrollPosition() > lastScroll &&
-    !containHide() &&
-    scrollPosition() > defaultOffset
-  ) {
-    //scroll down
-    header.classList.add('hide');
-  } else if (scrollPosition() < lastScroll && containHide()) {
-    //scroll up
-    header.classList.remove('hide');
+  function fixedHeader() {
+    header.classList.add('header--fixed');
+    main.style.marginTop = header.offsetHeight + 'px';
   }
+  fixedHeader();
 
-  lastScroll = scrollPosition();
-});
+  document.addEventListener('DOMContentLoaded', function checkScroll() {
+    if (window.pageYOffset > 0) {
+      header.classList.remove('header--background-transparent');
+    }
+  });
+
+  let lastPageYOffset = window.pageYOffset;
+
+  window.addEventListener('scroll', toggleHeader);
+
+  function toggleHeader() {
+    const newPageYOffset = window.pageYOffset;
+
+    if (newPageYOffset < header.offsetHeight) {
+      header.classList.add('header--show');
+      if (newPageYOffset < header.offsetHeight / 2) {
+        header.classList.add('header--background-transparent');
+      }
+    }
+
+    if (newPageYOffset < lastPageYOffset) {
+      header.classList.add('header--show');
+    } else {
+      header.classList.remove('header--show');
+      header.classList.remove('header--background-transparent');
+    }
+
+    lastPageYOffset = newPageYOffset;
+  }
+};

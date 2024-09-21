@@ -1,11 +1,10 @@
-/* eslint-disable prettier/prettier */
 export const useBurger = () => {
   const burgerBtn = document.querySelector('[data-burger="btn"]');
   const burgerMenu = document.querySelector('[data-burger="menu"]');
   const overlay = document.querySelector('[data-burger="overlay"]');
   const body = document.body;
 
-  const closeBurgerMenu = () => {
+  const closeBurger = () => {
     burgerBtn.classList.remove('burger--active');
     burgerMenu.classList.remove('header__right--visible');
     overlay.classList.remove('overlay--visible');
@@ -19,5 +18,5 @@ export const useBurger = () => {
     body.classList.toggle('body--fixed');
   });
 
-  overlay.addEventListener('click', closeBurgerMenu);
+  overlay.addEventListener('click', closeBurger);
 };

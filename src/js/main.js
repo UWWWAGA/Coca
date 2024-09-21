@@ -1,18 +1,19 @@
-import '../assets/scss/main.scss';
+import 'swiper/css';
+import 'swiper/css/autoplay';
+import 'swiper/css/effect-fade';
+import '/scss/main.scss';
 
 // components
 import { useTheme } from './components/theme.js';
 import { useBurger } from './components/burger.js';
-import {
-  useInsightSlider,
-  useTestimonialsSlider,
-  autoParthersSlider,
-} from './components/home/slider.js';
-import { useFooter } from './components/footer.js';
+import { useHeader } from './components/header.js';
+import { usePartnersSlider, useInsightSlider, useTestimonialsSlider } from './components/slider.js';
+import { useAccordionFooter } from './components/footer.js';
 
 useTheme();
 useBurger();
+useHeader();
+usePartnersSlider();
 useInsightSlider();
 useTestimonialsSlider();
-autoParthersSlider();
-useFooter();
+useAccordionFooter();
