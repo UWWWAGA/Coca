@@ -3,7 +3,7 @@
     font-size: 72px;
 
     @include tablet {
-      font-size: 48px;
+      font-size: 56px;
     }
 
     @include mobile {
@@ -11,7 +11,7 @@
     }
 
     @include small-mobile {
-      font-size: 32px;
+      font-size: 34px;
     }
   }
 
