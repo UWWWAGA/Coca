@@ -6,7 +6,11 @@ export const usePhone = () => {
   const input = document.querySelector('#phone');
 
   intlTelInput(input, {
+    separateDialCode: true,
+    autoPlaceholder: true,
     initialCountry: 'auto',
+    onlyCountries: ['us', 'ru'],
+    strictMode: true,
     geoIpLookup: (callback) => {
       fetch('https://ipapi.co/json')
         .then((res) => res.json())
@@ -14,6 +18,8 @@ export const usePhone = () => {
         .catch(() => callback('us'));
     },
     utilsScript:
-      'https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js',
+      'https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.12/js/utils.js',
   });
 };
+
+
