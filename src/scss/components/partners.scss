@@ -8,6 +8,7 @@
   &__container {
     @include flex-all-center;
     gap: 30px;
+    max-width: 1110px;
 
     @include small-tablet {
       gap: 50px;

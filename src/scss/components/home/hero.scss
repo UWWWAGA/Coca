@@ -2,10 +2,11 @@
   padding: 87px 0 141px;
 
   @include mini-desktop {
-    padding: 197px 0 121px;
+    padding: 100px 0 121px;
   }
 
   @include mobile {
+    padding-top: 0;
     min-height: calc(100dvh - 109px);
   }
 
