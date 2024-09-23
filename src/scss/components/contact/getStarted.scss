@@ -1,3 +1,4 @@
+/* stylelint-disable selector-class-pattern */
 .get-started {
   padding: 76px 0 160px;
 
@@ -138,4 +139,10 @@
       display: none;
     }
   }
+}
+
+// Тут изменение цвета текста при выборе страны в инпуте 
+.iti__selected-dial-code,
+.iti__country-name {
+  color: #1d1e25;
 }
