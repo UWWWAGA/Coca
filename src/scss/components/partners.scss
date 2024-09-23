@@ -60,7 +60,8 @@
     }
 
     @include small-tablet {
-      display: flex;
+      // display: flex;
+      display: inline-flex;
       gap: 0;
     }
   }

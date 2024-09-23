@@ -21,6 +21,7 @@ export const usePartnersSlider = () => {
       modules: [Autoplay],
       speed: 1000,
       loop: true,
+      slidesToShow: 3,
       slidesPerView: 1.5,
       spaceBetween: 15,
       centeredSlides: true,
