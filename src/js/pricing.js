@@ -1,14 +1,18 @@
-/* eslint-disable prettier/prettier */
 import '/scss/pricing.scss';
-// components
-import { useTheme } from './components/theme.js';
-import { useBurger } from './components/burger.js';
-import { useHeader } from './components/header.js';
-import { usePriceSwitcher } from './components/pricing/priceSwitcher.js';
-import { useAccordionFooter } from './components/footer.js';
 
+// Components
+import { useTheme } from './components/theme.js';
 useTheme();
+
+import { useBurger } from './components/burger.js';
 useBurger();
+
+import { useHeader } from './components/header.js';
 useHeader();
+
+import { usePriceSwitcher } from './components/pricing/plans.js';
 usePriceSwitcher();
-useAccordionFooter();
+
+// Accordiom footer menu
+import { useAccordion } from './components/accordion.js';
+useAccordion();

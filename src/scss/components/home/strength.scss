@@ -3,10 +3,30 @@
     border-bottom: 1px solid var(--neutral-color-30);
     padding-top: 66px;
     padding-bottom: 160px;
+  }
+
+  @include mobile {
+    padding-top: 26px;
+    padding-bottom: 50px;
+  }
+
+  &__list {
+    @include flex-align-center;
+
+    @include tablet {
+      gap: 82px;
+      flex-wrap: wrap;
+      justify-content: center;
+      text-align: center;
+    }
+
+    @include small-tablet {
+      gap: 62px;
+    }
 
     @include mobile {
-      padding-top: 26px;
-    padding-bottom: 70px;
+      gap: 42px;
+      margin-bottom: 50px;
     }
   }
 
@@ -15,37 +35,31 @@
     margin-bottom: 80px;
   }
 
-  &__list {
-    @include flex-align-center;
-
+  &__img {
     @include tablet {
-      display: grid;
-      gap: 52px;
-      grid-template-columns: repeat(2, 1fr);
+      justify-content: center;
+      margin-bottom: 60px;
     }
 
     @include mobile {
-      gap: 42px;
-      grid-template-columns: 1fr;
-      margin-bottom: 50px;
+      margin-bottom: 40px;
     }
   }
 
   &__item {
     @include tablet {
       justify-content: center;
-      text-align: center;
+      min-width: 325px;
+    }
+
+    @include mobile {
+      min-width: 240px;
     }
 
     &:not(:last-child) {
       @include flex-align-center;
       gap: 72px;
       margin-right: 72px;
-
-      @include mini-desktop {
-        gap: 52px;
-        margin-right: 52px;
-      }
 
       @include tablet {
         margin-right: 0;
@@ -54,21 +68,14 @@
       &::after {
         content: '';
         display: inline-block;
-        flex-shrink: 0;
         width: 1px;
         height: 99px;
-        background-color: var(--neutral-color-40);
+        background-color: #ced1d8;
 
         @include tablet {
           display: none;
         }
       }
-    }
-
-    &-text {
-      font-weight: 500;
-      line-height: 1.78;
-      color: var(--neutral-color-150);
     }
 
     &-num {
@@ -91,15 +98,11 @@
         font-size: 42px;
       }
     }
-  }
 
-  &__img {
-    @include tablet {
-      margin-bottom: 60px;
-    }
-
-    @include mobile {
-      margin-bottom: 40px;
+    &-text {
+      font-weight: 500;
+      line-height: 1.8;
+      color: var(--neutral-color-150);
     }
   }
 
@@ -110,23 +113,23 @@
       gap: 20px;
       flex-direction: column;
     }
-  }
 
-  &__title {
-    font-weight: 600;
-    line-height: 1.2;
-    letter-spacing: -0.04em;
-    color: var(--neutral-color-100);
-  }
+    &-title {
+      font-weight: 600;
+      line-height: 1.2;
+      letter-spacing: -0.04em;
+      color: var(--neutral-color-100);
+    }
 
-  &__descr {
-    max-width: 421px;
-    font-weight: 500;
-    line-height: 1.78;
-    color: var(--neutral-color-150);
+    &-deckr {
+      max-width: 421px;
+      font-weight: 500;
+      line-height: 1.78;
+      color: var(--neutral-color-150);
 
-    @include tablet {
-      max-width: 700px;
+      @include tablet {
+        max-width: 700px;
+      }
     }
   }
 }

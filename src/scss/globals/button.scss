@@ -5,7 +5,7 @@
     font-size: 16px;
     line-height: 1.5;
     text-align: center;
-    transition: opacity var(--transition);
+    transition: all var(--transition);
 
     @include mobile {
       font-size: 14px;

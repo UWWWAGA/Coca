@@ -1,43 +1,31 @@
 export const useHeader = () => {
   const header = document.querySelector('.header');
-  const main = document.querySelector('.main');
+  const heroSection = document.querySelector('.hero');
+  const headerHeight = header.offsetHeight;
+  let lastScrollTop = 0;
+  // Задем отступ от .hero т.к. .header выпадает изи потока
+  // heroSection.style.marginTop = `${headerHeight}px`;
+  document.body.style.marginTop = `${headerHeight}px`;
 
-  if (!header) return;
-  if (!main) return;
-
-  function fixedHeader() {
-    header.classList.add('header--fixed');
-    main.style.marginTop = header.offsetHeight + 'px';
-  }
-  fixedHeader();
-
-  document.addEventListener('DOMContentLoaded', function checkScroll() {
-    if (window.pageYOffset > 0) {
-      header.classList.remove('header--background-transparent');
-    }
-  });
-
-  let lastPageYOffset = window.pageYOffset;
-
-  window.addEventListener('scroll', toggleHeader);
-
-  function toggleHeader() {
-    const newPageYOffset = window.pageYOffset;
-
-    if (newPageYOffset < header.offsetHeight) {
+  window.addEventListener('scroll', () => {
+    let scrollDistance = window.scrollY;
+    // Добавляем класс header--show и header--background-transparent когда .header находится в самом верху страницы
+    if (scrollDistance <= headerHeight) {
       header.classList.add('header--show');
-      if (newPageYOffset < header.offsetHeight / 2) {
-        header.classList.add('header--background-transparent');
-      }
-    }
-
-    if (newPageYOffset < lastPageYOffset) {
-      header.classList.add('header--show');
-    } else {
+      header.classList.add('header--background-transparent');
+      // Добавляем класс header--fixed при прокрутке вниз, при условии что мы прокрутили больше высоты headerHeight
+    } else if (scrollDistance > lastScrollTop && scrollDistance > headerHeight) {
       header.classList.remove('header--show');
+      header.classList.add('header--fixed');
+      header.classList.remove('header--background-transparent');
+
+      // Добавляем класс header--show и header--fixed при прокрутке вверх
+    } else if (scrollDistance < lastScrollTop && scrollDistance > headerHeight) {
+      header.classList.add('header--show');
+      header.classList.add('header--fixed');
       header.classList.remove('header--background-transparent');
     }
 
-    lastPageYOffset = newPageYOffset;
-  }
+    lastScrollTop = scrollDistance;
+  });
 };

@@ -1,8 +1,10 @@
+<!-- Overlay for the burger -->
 <div class="overlay" data-burger="overlay"></div>
-<header class="header header--show header--fixed header--background-transparent">
-  <h1 class="hidden">Coca - Digital Marketing Website. {=$title} page</h1>
+<!-- header -->
+<header class="header header--fixed header--show header--background-transparent">
+  <h1 class="hidden">Coca - Digital-Marketing-Website. "{=$title}"</h1>
   <div class="container header__container">
-    <a class="header__logo" href="/Coca/" aria-label="Home page">
+    <a class="header__logo" href="/coca/" aria-label="Home Page">
       <svg
         width="140"
         height="66"
@@ -36,25 +38,23 @@
     <div class="header__right" data-burger="menu">
       <nav class="nav header__nav">
         <ul class="nav__list">
+          <li class="nav__item"><a class="nav__link text-p-default" href="/coca/">Home</a></li>
           <li class="nav__item">
-            <a class="nav__link text-p-default" href="/Coca/">Home</a>
+            <a class="nav__link text-p-default" href="/coca/about.html">About</a>
           </li>
           <li class="nav__item">
-            <a class="nav__link text-p-default" href="/Coca/about.html">About</a>
+            <a class="nav__link text-p-default" href="/coca/pricing.html">Pricing</a>
           </li>
           <li class="nav__item">
-            <a class="nav__link text-p-default" href="/Coca/blog.html">Blog</a>
+            <a class="nav__link text-p-default" href="/coca/blog.html">Blog</a>
           </li>
           <li class="nav__item">
-            <a class="nav__link text-p-default" href="/Coca/pricing.html">Pricing</a>
-          </li>
-          <li class="nav__item">
-            <a class="nav__link text-p-default" href="/Coca/contact.html">Contact</a>
+            <a class="nav__link text-p-default" href="/coca/contact.html">Contact</a>
           </li>
         </ul>
       </nav>
       <label class="header__switcher">
-        <span class="header__switcher-text text-p-default" data-theme-text>Light</span>
+        <span class="header__switcher-text text-p-default">Dark</span>
         <input class="header__switcher-checkbox" type="checkbox" data-theme-switcher />
       </label>
     </div>

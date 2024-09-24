@@ -19,7 +19,7 @@
   justify-content: space-between;
 }
 
-@mixin flex-justify-between-align-center {
+@mixin flex-align-center-between {
   display: flex;
   align-items: center;
   justify-content: space-between;

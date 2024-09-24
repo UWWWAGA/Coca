@@ -1,59 +1,66 @@
 :root {
-  // neutral colors
+  // Neutral Colors
   --neutral-color-10: #fff;
   --neutral-color-20: #f5f5f5;
   --neutral-color-30: #ededed;
   --neutral-color-40: #ced1d8;
   --neutral-color-50: #afb3bb;
   --neutral-color-60: #18181d;
-  --neutral-color-70: #606060;
   --neutral-color-90: #161a34;
   --neutral-color-100: #1d1e25;
   --neutral-color-120: #828282;
   --neutral-color-130: #d9d9d9;
   --neutral-color-140: #000;
   --neutral-color-150: #7e8492;
+  --neutral-color-160: #afb3bb;
 
-  // primary colors
-  --primary-color-30: #1463ff;
-  --primary-color-50: #4e7ddb;
-  --primary-color-60: #4b628f;
-
-  // success colors
-  --success-color-70: #e2f8f0b3;
-
-  // logo colors
+  // Logo Colors
   --logo-color-text: #101010;
   --logo-color-circle: #101010;
 
-  // bg colors
-  --black-bg-color: #1d1e25;
+  // Overview Colors
+  --overview-bg-color: #1d1e25;
+  --overview-text-color: #fff;
 
-  // btns colors
-  --btns-color-border: #1d1e25;
-  --btns-color-bg-disabled: #fff;
-  --btns-color-path-disabled: #ced1d8;
+  // Primary Color
+  --primary-color-30: #1463ff;
+  --primary-color-50: #4e7ddb;
+  --primary-color-60: #1463ff;
 
-  // container
+  // Success colors
+  --success-colors-70: #e2f8f0b3;
+
+  // Testimonials colors
+  --testimonials-colors-btn: #1d1e25;
+  --testimonials-colors-arrow: #fff;
+
+  // Footer colors
+  --footer-bg-color: #1d1e25;
+
+  // Blog colors
+  --blog-bg-color: #1d1e25;
+
+  // Container
   --container-padding: 15px;
   --container-width: 1200px;
+  --container-width-post: 940px;
 
   @include mini-desktop {
     --container-width: 1000px;
   }
 
   @include tablet {
-    --container-width: 800px;
+    --container-width: 860px;
   }
 
   @include mobile {
     --container-width: 480px;
   }
 
-  // transition
+  // Transition
   --transition: 0.2s ease-in-out;
 
-  // z-index
+  // Z-index
   --z-index-0: -1;
   --z-index-1: 1;
   --z-index-2: 2;
@@ -62,27 +69,29 @@
 }
 
 [data-theme='dark'] {
-  // neutral colors
+  // Neutral Colors
   --neutral-color-10: #1d1e25;
-  --neutral-color-90: #18181D;
   --neutral-color-100: #fff;
   --neutral-color-140: #fff;
+  --neutral-color-160: #fff;
 
-  // success colors
-  --success-color-70: #e2f8f033;
-
-  // logo colors
+  // Logo Colors
   --logo-color-text: #fff;
   --logo-color-circle: #343542;
 
-  // bg colors
-  --black-bg-color: #18181d;
+  // Overview Colors
+  --overview-bg-color: #18181d;
 
-  // bg colors reverse
-  --black-bg-color-reverse: #1d1e25;
+  // Footer colors
+  --footer-bg-color: #18181d;
 
-  // btns colors
-  --btns-color-border: #ced1d8;
-  --btns-color-bg-disabled: #ced1d8;
-  --btns-color-path-disabled: #1d1e25;
+  // Blog colors
+  --blog-bg-color: #18181d;
+
+  // Success colors
+  --success-colors-70: #e2f8f033;
+
+  // Testimonials colors
+  --testimonials-colors-btn: #ced1d8;
+  --testimonials-colors-arrow: #000;
 }

@@ -43,7 +43,7 @@
     }
 
     @include small-mobile {
-      font-size: 22px;
+      font-size: 24px;
     }
   }
 
@@ -51,7 +51,7 @@
     font-size: 36px;
 
     @include mobile {
-      font-size: 26px;
+      font-size: 24px;
     }
   }
 
@@ -76,23 +76,23 @@
   &-h3,
   &-h4,
   &-h5 {
-    line-height: 1.2;
+    line-height: 120%;
   }
 }
 
 .text {
   &-p {
     &-subtitle {
-      display: flex;
+      @include flex-align-center;
       gap: 27px;
       font-weight: 600;
       font-size: 32px;
-      line-height: 1.31;
+      line-height: 131%;
       letter-spacing: -0.03em;
       color: var(--neutral-color-100);
 
-      @include small-tablet {
-        text-align: center;
+      @include mini-desktop {
+        justify-content: center;
       }
 
       @include tablet {
@@ -100,23 +100,22 @@
       }
 
       @include mobile {
-        font-size: 22px;
+        font-size: 24px;
       }
 
       @include small-mobile {
-        font-size: 18px;
+        font-size: 20px;
       }
 
       &::before {
         content: '';
         display: inline-block;
-        width: 100%;
+        width: 76px;
         height: 1px;
-        max-width: 76px;
-        background-color: var(--neutral-color-140);
-        transform: translateY(20px);
+        background-color: var(--neutral-color-100);
+        transform: translateY(-43px);
 
-        @include small-tablet {
+        @include mini-desktop {
           display: none;
         }
       }
@@ -147,3 +146,5 @@
     }
   }
 }
+
+

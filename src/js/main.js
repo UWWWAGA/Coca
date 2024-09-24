@@ -1,19 +1,20 @@
-import 'swiper/css';
-import 'swiper/css/autoplay';
-import 'swiper/css/effect-fade';
 import '/scss/main.scss';
 
-// components
+// Components
 import { useTheme } from './components/theme.js';
-import { useBurger } from './components/burger.js';
-import { useHeader } from './components/header.js';
-import { usePartnersSlider, useInsightSlider, useTestimonialsSlider } from './components/slider.js';
-import { useAccordionFooter } from './components/footer.js';
-
 useTheme();
+
+import { useBurger } from './components/burger.js';
 useBurger();
+
+import { useHeader } from './components/header.js';
 useHeader();
-usePartnersSlider();
-useInsightSlider();
+
+import { useSlider, useTestimonialsSlider, usePartnersSlider } from './components/home/slider.js';
+useSlider();
 useTestimonialsSlider();
-useAccordionFooter();
+usePartnersSlider();
+
+// Accordiom footer menu
+import { useAccordion } from './components/accordion.js';
+useAccordion();

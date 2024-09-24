@@ -136,7 +136,7 @@
   }
 
   &__plans {
-    @include flex-justify-between-align-center;
+    @include flex-align-center-between;
 
     @include tablet {
       gap: 20px;
@@ -216,7 +216,7 @@
         margin-right: 10px;
         width: 20px;
         height: 20px;
-        background: url('../assets/icons/pricing-tick-icon.svg');
+        background: url('./assets/icons/pricing-tick-icon.svg');
         transform: translateY(2px);
       }
 

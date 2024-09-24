@@ -1,16 +1,27 @@
-/* eslint-disable prettier/prettier */
 import '/scss/contact.scss';
-// components
-import { useTheme } from './components/theme.js';
-import { useBurger } from './components/burger.js';
-import { useHeader } from './components/header.js';
-import { usePartnersSlider } from './components/slider.js';
-import { usePhone } from './components/contact/phone.js';
-import { useAccordionFooter } from './components/footer.js';
 
+// Components
+import { useTheme } from './components/theme.js';
 useTheme();
+
+import { useBurger } from './components/burger.js';
 useBurger();
+
+import { useHeader } from './components/header.js';
 useHeader();
+
+import { usePartnersSlider } from './components/home/slider.js';
 usePartnersSlider();
-usePhone();
-useAccordionFooter();
+
+import { useTestInputMask } from './components/contact/phone.js';
+// useIntlTelInput();
+// usePhoneMask();
+//useIntlTelInputMask();
+useTestInputMask();
+
+// import { formValidator } from './components/contact/formValidator.js';
+// formValidator();
+
+// Accordiom footer menu
+import { useAccordion } from './components/accordion.js';
+useAccordion();

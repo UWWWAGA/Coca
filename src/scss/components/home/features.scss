@@ -2,19 +2,16 @@
   padding: 160px 0 94px;
 
   @include mini-desktop {
-    padding-top: 100px;
-  }
-
-  @include mobile {
-    padding: 60px 0;
+    padding: 100px 0 60px;
   }
 
   &__container {
-    @include flex-justify-between-align-center;
+    @include flex-align-center-between;
 
     @include mini-desktop {
       gap: 40px;
       flex-direction: column;
+      align-items: flex-start;
     }
 
     @include mobile {
@@ -28,7 +25,7 @@
 
   &__stats {
     position: absolute;
-    right: 36px;
+    right: 39px;
     bottom: 40px;
     padding: 18px;
     max-width: 290px;
@@ -40,14 +37,14 @@
     }
 
     @include small-mobile {
-      right: 8px;
-      bottom: 10px;
+      right: 12px;
+      bottom: 12px;
       padding: 14px;
       max-width: 240px;
     }
 
     &-head {
-      @include flex-justify-between-align-center;
+      @include flex-align-center-between;
       margin-bottom: 19px;
     }
 
@@ -62,12 +59,12 @@
       gap: 26px;
 
       &:not(:last-child) {
-        border-bottom: 1px solid var(--neutral-color-30);
+        border-bottom: 0.73px solid #ededed;
         padding-bottom: 23px;
       }
 
       &:last-child {
-        padding-top: 20px;
+        padding-top: 23px;
       }
 
       &-img {
@@ -81,11 +78,12 @@
         font-weight: 500;
         font-size: 10px;
         line-height: 1.5;
-        color: var(--neutral-color-150);
+        color: #7e8492;
       }
 
       &-price {
-        @include flex-justify-between-align-center;
+        @include flex-align-center;
+        gap: 12px;
         margin-bottom: 9px;
 
         &-num {
@@ -95,7 +93,7 @@
           color: #1d1e25;
 
           @include mobile {
-            font-size: 20px;
+            font-size: 18px;
           }
         }
 
@@ -105,6 +103,7 @@
           font-weight: 500;
           font-size: 10px;
           line-height: 1.5;
+          text-align: center;
           color: #1d1e25;
         }
       }
@@ -112,9 +111,9 @@
       &-descr {
         font-weight: 400;
         font-size: 8px;
-        color: var(--neutral-color-150);
+        color: #7e8492;
 
-        &-span {
+        span {
           font-weight: 700;
         }
       }
@@ -125,7 +124,7 @@
     max-width: 557px;
 
     @include mini-desktop {
-      max-width: 800px;
+      max-width: 990px;
     }
   }
 
@@ -136,10 +135,6 @@
     letter-spacing: -0.04em;
     color: var(--neutral-color-100);
 
-    @include small-tablet {
-      text-align: center;
-    }
-
     @include mobile {
       margin-bottom: 20px;
     }
@@ -149,56 +144,43 @@
     margin-bottom: 40px;
     max-width: 360px;
     font-weight: 500;
-    line-height: 1.78;
+    line-height: 1.7;
     color: var(--neutral-color-150);
 
     @include mini-desktop {
-      max-width: 600px;
-    }
-
-    @include small-tablet {
-      margin-right: auto;
-      margin-left: auto;
-      text-align: center;
-    }
-
-    @include small-mobile {
-      margin-bottom: 20px;
+      max-width: 700px;
     }
   }
 
   &__list {
-    @include flex-column;
+    display: grid;
     gap: 32px;
 
     @include mobile {
-      gap: 22px;
+      gap: 25px;
     }
   }
 
   &__item {
     @include flex-align-center;
-    gap: 18px;
+    gap: 16px;
     max-width: 393px;
     font-weight: 500;
     line-height: 1.78;
     color: var(--neutral-color-100);
 
     @include mini-desktop {
-      max-width: 500px;
-    }
-
-    @include small-tablet {
-      align-self: flex-start;
-      max-width: 100%;
+      max-width: 700px;
     }
 
     &::before {
       content: '';
-      flex-shrink: 0;
+      display: inline-block;
+      padding-right: 24px;
       width: 20px;
       height: 20px;
-      background: url('../assets/icons/features-tick-icon.svg');
+      background: url('../assets/icons/mark-icon.svg');
+      background-repeat: no-repeat;
     }
   }
 }

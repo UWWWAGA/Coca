@@ -1,13 +1,13 @@
 .hero-decor {
-position: relative;
+  position: relative;
 
   &::before {
     top: 50px;
     left: 181px;
     width: 551px;
     height: 551px;
-    background: #fa7515;
-    opacity: 0.2;
+    background-color: #fa7515;
+    opacity: 0.13;
     filter: blur(220px);
 
     @include mini-desktop {
@@ -29,11 +29,11 @@ position: relative;
     bottom: 0;
     width: 525px;
     height: 525px;
-    background: var(--success-color-70);
+    background-color: var(--success-colors-70);
     filter: blur(180px);
 
     @include mini-desktop {
-      width: 32px;
+      width: 325px;
       height: 325px;
     }
 
@@ -48,7 +48,6 @@ position: relative;
     content: '';
     position: absolute;
     z-index: var(--z-index-0);
-    display: inline-block;
     border-radius: 50%;
   }
 }
