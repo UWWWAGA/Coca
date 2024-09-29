@@ -1,15 +1,11 @@
-// import Swiper JS
+/* eslint-disable prettier/prettier */
 import Swiper from 'swiper';
-// import Swiper JS Modules
 import { Navigation } from 'swiper/modules';
-// import Swiper styles
 import 'swiper/css';
 
 export const useAboutSlider = () => {
   new Swiper('.hero__slider', {
-    // Swiper to use modules
     modules: [Navigation],
-    // Configure Swiper
     slidesPerView: 1.2,
     spaceBetween: 10,
     loop: true,
@@ -32,10 +28,33 @@ export const useAboutSlider = () => {
         loop: true,
       },
     },
-    // Navigation arrows
     navigation: {
       nextEl: '.about__btn--next',
       prevEl: '.about__btn--prev',
+    },
+  });
+};
+
+export const useTeamSlider = () => {
+  new Swiper('.team__slider', {
+    modules: [Navigation],
+    slidesPerView: 1.2,
+    spaceBetween: 15,
+    loop: true,
+    breakpoints: {
+      420: {
+        slidesPerView: 2,
+        spaceBetween: 15,
+      },
+
+      577: {
+        slidesPerView: 3,
+        spaceBetween: 32,
+      },
+    },
+    navigation: {
+      nextEl: '.team__btn--next',
+      prevEl: '.team__btn--prev',
     },
   });
 };

@@ -14,5 +14,6 @@ useHeader();
 import { useAccordion } from './components/accordion.js';
 useAccordion();
 
-import { useAboutSlider } from './components/about/aboutSlider.js';
+import { useAboutSlider, useTeamSlider } from './components/about/aboutSlider.js';
 useAboutSlider();
+useTeamSlider();
