@@ -33,3 +33,9 @@
     @content;
   }
 }
+
+@mixin mini-mobile {
+  @media (max-width: 380px) {
+    @content
+  }
+}
