@@ -7,7 +7,7 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-.vite
+vite/deps_temp_330993f1
 node_modules
 dist
 dist-ssr
