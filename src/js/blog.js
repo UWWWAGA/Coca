@@ -13,8 +13,8 @@ import { useBlogSlider, useTabFilter } from './components/blog/blogSlider.js';
 useBlogSlider();
 useTabFilter();
 
-// import { useArticlesSlider } from './components/blog/articlesSlider.js';
-// useArticlesSlider();
+import { useArticlesSlider } from './components/blog/articlesSlider.js';
+useArticlesSlider();
 
 import { useAccordion } from './components/accordion.js';
 useAccordion();
